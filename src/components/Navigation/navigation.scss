@@ -40,12 +40,16 @@
 
     position: relative;
     padding: 24px;
-    height: 64px;
+    height: 48px;
     width: 327px;
     color: $gray-secondary;
     box-shadow: -1px 0 0 0 $super-light-gray;
     border: none;
     outline: none;
+
+    @include onDesktop {
+      height: 64px;
+    }
 
     &:focus {
       color: $black-primary;
@@ -66,11 +70,11 @@
       cursor: pointer;
 
       &--close {
-        background-image: url("../../images-style/Icons/Close.svg");
+        background-image: url("../../../public/img/Close.svg");
       }
 
       &--search {
-        background-image: url("../../images-style/Icons/Search.svg");
+        background-image: url("../../../public/img/Search.svg");
       }
     }
   }
@@ -140,12 +144,12 @@
     }
 
     &--favourites {
-      background-image: url("../../images-style/Icons/favorites.svg");
+      background-image: url("../../../public/img/favorites.svg");
       position: relative;
     }
 
     &--cart {
-      background-image: url("../../images-style/Icons/cart.svg");
+      background-image: url("../../../public/img/cart.svg");
       position: relative;
     }
 
@@ -159,14 +163,19 @@
       text-align: center;
       font-size: 9px;
       line-height: 14px;
-      top: 18px;
-      left: 32px;
+      top: 10px;
+      left: 24px;
       width: 14px;
       height: 14px;
       color: $color-white;
       background-color: $red;
       border: 1px solid $color-white;
       border-radius: 50%;
+
+      @include onDesktop {
+        top: 18px;
+        left: 32px;
+      }
     }
   }
 }

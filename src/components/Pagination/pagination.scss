@@ -9,7 +9,7 @@
     width: 32px;
     border: 1px solid $light-gray-icons;
     background: no-repeat center;
-    background-image: url(../../images-style/Icons/arrow-left-black.svg);
+    background-image: url("../../../public/img/arrow-left-black.svg");
     cursor: pointer;
 
     &--right {
@@ -21,13 +21,14 @@
     }
 
     &:disabled {
-      background-image: url(../../images-style/Icons/arrow-left.svg);
+      background-image: url("../../../public/img/arrow-left.svg");
       border-color: $super-light-gray;
     }
   }
 
   &__page {
     @extend %body-text;
+    
     display: flex;
     justify-content: center;
     align-items: center;

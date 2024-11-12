@@ -7,6 +7,7 @@
 
   &__name {
     @extend %body-text;
+
     color: $gray-secondary;
   }
 
@@ -18,6 +19,7 @@
 
   &__header {
     @extend %buttons;
+
     appearance: none;
     position: relative;
     width: 176px;
@@ -37,7 +39,7 @@
       right: 12px;
       width: 16px;
       height: 16px;
-      background-image: url(../../images-style/Icons/arrow-right.svg);
+      background-image: url("../../../public/img/arrow-right.svg");
       transform: rotateZ(90deg);
       transition: all $transition-time;
     }
@@ -103,6 +105,7 @@
 
   &__item {
     @extend %body-text;
+    
     width: 174px;
     height: 32px;
     padding-left: 12px;

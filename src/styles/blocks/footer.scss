@@ -17,6 +17,7 @@
 
   &__info {
     @extend %UPPERCASE;
+    
     display: flex;
     gap: 64px;
   }
@@ -34,10 +35,11 @@
 
   &__button {
     @extend %small-text;
+
     position: relative;
     padding: 16px;
     border: 1px solid $gray-secondary;
-    background-image: url(../../images-style/Icons/arrow-left-black.svg);
+    background-image: url("../../../public/img/arrow-left-black.svg");
     background-position: center;
     background-repeat: no-repeat;
     transform: rotateZ(90deg);

@@ -1,6 +1,7 @@
 .product-details {
   &__title {
     @extend %h1;
+
     padding-top: 16px;
     color: $black-primary;
   }
@@ -50,6 +51,7 @@
 
   &__not-found-product {
     @extend %h1;
+
     margin-top: 40px;
     color: $black-primary;
   }
@@ -74,6 +76,7 @@
 
     &-title {
       @extend %small-text;
+
       color: $gray-secondary;
     }
 
@@ -129,6 +132,7 @@
 
     &-memory {
       @extend %body-text;
+
       padding: 7px 8px 4px ;
       border: 1px solid $light-gray-icons;
       color: $black-primary;
@@ -160,11 +164,13 @@
 
       &-new {
         @extend %h1;
+
         color: $black-primary;
       }
 
       &-old {
         @extend %h3;
+
         font-size: 22px;
         line-height: 36px;
         color: $gray-secondary;
@@ -178,6 +184,7 @@
 
       &-card {
         @extend %buttons;
+
         height: 48px;
         width: 264px;
         color: $color-white;
@@ -202,7 +209,7 @@
         height: 48px;
         border: 1px solid $light-gray-icons;
         background-color: $color-white;
-        background-image: url(../../images-style/Icons/favorites.svg);
+        background-image: url("../../../public/img/favorites.svg");
         background-position: center;
         background-repeat: no-repeat;
         cursor: pointer;
@@ -213,7 +220,7 @@
 
         &--selected {
           border: 1px solid $super-light-gray;
-          background-image: url(../../images-style/Icons/favourites-filled.svg);
+          background-image: url("../../../public/img/favourites-filled.svg");
         }
       }
     }
@@ -228,6 +235,7 @@
 
   &__info-param {
     @extend %small-text;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -243,6 +251,7 @@
 
   &__id {
     @extend %small-text;
+
     color: $light-gray-icons;
   }
 
@@ -257,6 +266,7 @@
 
     &-main-title {
       @extend %h2;
+
       color: $black-primary;
       margin-bottom: 32px;
       padding-bottom: 16px;
@@ -271,11 +281,13 @@
       &-desc {
         &-title {
           @extend %h3;
+
           color: $black-primary;
         }
 
         &-texts {
           @extend %body-text;
+
           color: $gray-secondary;
 
           &-paragraph {
@@ -291,6 +303,7 @@
 
     &-main-title {
       @extend %h2;
+
       color: $black-primary;
       margin-bottom: 25px;
       padding-bottom: 16px;
@@ -306,6 +319,7 @@
 
     &-body {
       @extend %body-text;
+      
       display: flex;
       justify-content: space-between;
       align-items: center;

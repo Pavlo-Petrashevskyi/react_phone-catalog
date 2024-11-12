@@ -27,6 +27,16 @@ export const Dropdown: React.FC<DropdownProps> = ({
       info[0].title,
   );
 
+  const toggleDropdownAndFocus = (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
+  ) => {
+    if (isToggled) {
+      e.currentTarget.blur();
+    }
+
+    setIsToggled(!isToggled);
+  };
+
   const handleTitleAndSortChange = (title: string, sortValue: string) => {
     setTitle(title);
     setIsToggled(false);
@@ -51,7 +61,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
         <div
           tabIndex={0}
           className="dropdown__header"
-          onClick={() => setIsToggled(!isToggled)}
+          onClick={toggleDropdownAndFocus}
           onBlur={() =>
             setTimeout(() => {
               return setIsToggled(false);
