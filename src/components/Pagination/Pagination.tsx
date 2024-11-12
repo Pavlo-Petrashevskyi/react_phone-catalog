@@ -48,6 +48,7 @@ export const Pagination: React.FC<PaginationProps> = ({
             disabled={+curPage === 1}
             onClick={() => setPages(+curPage - 1)}
           />
+
           <div className="pagination__container">
             {countingPages().map(page => (
               <div
@@ -61,6 +62,7 @@ export const Pagination: React.FC<PaginationProps> = ({
               </div>
             ))}
           </div>
+
           <button
             type="button"
             data-cy="paginationRight"

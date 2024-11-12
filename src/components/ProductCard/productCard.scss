@@ -18,6 +18,7 @@
 
   &__title {
     @extend %body-text;
+
     width: 224px;
     height: 42px;
     margin-bottom: 8px;
@@ -33,11 +34,13 @@
 
     &-new {
       @extend %h2;
+
       color: $black-primary;
     }
 
     &-old {
       @extend %h3;
+
       font-size: 22px;
       color: $gray-secondary;
       text-decoration: line-through;
@@ -52,6 +55,7 @@
 
     &-section {
       @extend %small-text;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -72,6 +76,7 @@
 
     &-card {
       @extend %buttons;
+      
       height: 40px;
       width: 176px;
       color: $color-white;
@@ -96,7 +101,7 @@
       height: 40px;
       border: 1px solid $light-gray-icons;
       background-color: $color-white;
-      background-image: url(../../images-style/Icons/favorites.svg);
+      background-image: url("../../../public/img/favorites.svg");
       background-position: center;
       background-repeat: no-repeat;
       cursor: pointer;
@@ -107,7 +112,7 @@
 
       &--selected {
         border: 1px solid $super-light-gray;
-        background-image: url(../../images-style/Icons/favourites-filled.svg);
+        background-image: url("../../../public/img/favourites-filled.svg");
       }
     }
   }

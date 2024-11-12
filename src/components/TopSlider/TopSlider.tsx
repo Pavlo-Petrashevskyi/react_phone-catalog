@@ -14,7 +14,7 @@ const TOP_SLIDER_IMAGES = [
 
 export const HomePageTopSlider = () => {
   const [sliderIndex, setSliderIndex] = useState(0);
-  const intervalRef = useRef<NodeJS.Timer>(setInterval(() => {}, 0));
+  const intervalRef = useRef<NodeJS.Timeout>(setInterval(() => {}, 0));
 
   const ShowPrevSlide = () => {
     if (sliderIndex === 0) {

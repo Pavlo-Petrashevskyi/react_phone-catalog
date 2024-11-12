@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
@@ -70,12 +71,14 @@ export const ProductDetailsPage: React.FC<ProductDetailsPageProps> = ({
         : deleteItemFromCart(productId);
     }
 
-    return cart;
+    return () => {
+      return cart;
+    };
   }, [isSelectedToCard, productId]);
 
   useEffect(() => {
     setCartLength(cartSum(cart));
-  }, [cart.length]);
+  }, [cart]);
 
   useEffect(() => {
     if (isSelectedToFav !== findItemInFav(productId) && product) {
@@ -84,7 +87,9 @@ export const ProductDetailsPage: React.FC<ProductDetailsPageProps> = ({
         : deleteItemFromFav(product);
     }
 
-    return fav;
+    return () => {
+      return fav;
+    };
   }, [isSelectedToFav]);
 
   useEffect(() => {
@@ -323,10 +328,8 @@ export const ProductDetailsPage: React.FC<ProductDetailsPageProps> = ({
                           className={classNames(
                             'product-details__info-buttons-card',
                             isSelectedToCard
-                              ? // eslint-disable-next-line max-len
-                              'product-details__info-buttons-card--selected'
-                              : // eslint-disable-next-line max-len
-                              'product-details__info-buttons-card--not-selected',
+                              ? 'product-details__info-buttons-card--selected'
+                              : 'product-details__info-buttons-card--not-selected',
                           )}
                         >
                           {isSelectedToCard ? 'Added to card' : 'Add to card'}
@@ -340,10 +343,8 @@ export const ProductDetailsPage: React.FC<ProductDetailsPageProps> = ({
                           className={classNames(
                             'product-details__info-buttons-fav',
                             isSelectedToFav
-                              ? // eslint-disable-next-line max-len
-                              'product-details__info-buttons-fav--selected'
-                              : // eslint-disable-next-line max-len
-                              'product-details__info-buttons-fav--not-selected',
+                              ? 'product-details__info-buttons-fav--selected'
+                              : 'product-details__info-buttons-fav--not-selected',
                           )}
                         />
                       </div>
